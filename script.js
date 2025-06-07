@@ -114,17 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
 function typeWriter(element, text, speed = 100) {
     let i = 0;
 
-    // Récupère le curseur déjà dans l'élément
-    const cursor = element.querySelector('.cursor');
-
-    // Vide le texte sauf le curseur
-    element.innerHTML = '';
-    element.appendChild(cursor);
-
     function type() {
         if (i < text.length) {
-            // Ajoute le caractère juste avant le curseur
-            cursor.insertAdjacentText('beforebegin', text.charAt(i));
+            element.innerHTML += text.charAt(i);
             i++;
             setTimeout(type, speed);
         }
