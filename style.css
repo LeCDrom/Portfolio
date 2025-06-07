@@ -210,17 +210,21 @@ main {
     color: white;
 }
 
-.hero h1 {
+.typewriter {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-/* .hero h1 {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(27, 19, 27, 0.373);
-} */
+.cursor {
+    font-weight: 100;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 
 .hero .subtitle {
     font-size: 1.3rem;

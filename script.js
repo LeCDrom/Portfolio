@@ -113,11 +113,18 @@ document.addEventListener('DOMContentLoaded', function () {
 // Add typing effect to hero title
 function typeWriter(element, text, speed = 100) {
     let i = 0;
+
+    // Récupère le curseur déjà dans l'élément
+    const cursor = element.querySelector('.cursor');
+
+    // Vide le texte sauf le curseur
     element.innerHTML = '';
+    element.appendChild(cursor);
 
     function type() {
         if (i < text.length) {
-            element.innerHTML += text.charAt(i);
+            // Ajoute le caractère juste avant le curseur
+            cursor.insertAdjacentText('beforebegin', text.charAt(i));
             i++;
             setTimeout(type, speed);
         }
@@ -127,7 +134,7 @@ function typeWriter(element, text, speed = 100) {
 
 // Initialize typing effect when page loads
 window.addEventListener('load', function () {
-    const heroTitle = document.querySelector('.hero h1');
+    const heroTitle = document.querySelector('.typewriter');
     if (heroTitle) {
         typeWriter(heroTitle, 'Côme Dairin', 150);
     }
