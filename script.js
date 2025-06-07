@@ -27,6 +27,9 @@ function showSection(sectionId) {
     document.querySelectorAll('.section').forEach(sec =>
         sec.classList.remove('active')
     );
+    document.querySelectorAll('.home').forEach(sec =>
+        sec.classList.remove('active')
+    );
 
     // 2) Afficher la section demandée
     const target = document.getElementById(sectionId);
@@ -53,7 +56,6 @@ function toggleMobileMenu() {
     navLinks.classList.toggle('mobile-active');
 }
 
-// Add smooth scrolling effect when switching sections
 document.addEventListener('DOMContentLoaded', function () {
     // Gérer les liens "CV", "GitHub" et "email"
     const links = document.querySelectorAll('a[href="#"]');
