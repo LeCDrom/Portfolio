@@ -1,7 +1,7 @@
 :root {
     --primary: #5f445c;
     --secondary: #926d8e;
-    --light: #685165;
+    --light: #7c5973;
     --dark: #372536;
     --translucent: rgba(95, 68, 92, 0.2);
 
@@ -14,6 +14,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -95,9 +99,6 @@ nav {
     font-size: 16px;
 }
 
-.nav-links a.active {}
-
-
 .important-links {
     display: flex;
     list-style: none;
@@ -154,7 +155,7 @@ nav {
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-out;
     border: 2px solid var(--primary);
     background-color: var(--primary);
     cursor: pointer;
@@ -180,6 +181,41 @@ nav {
 
 .btn-secondary:hover {
     background: var(--primary);
+    color: white;
+}
+
+/* Bottom panel */
+.bottom-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 75px;
+    height: 75px;
+    background-color: var(--primary);
+    border-radius: var(--panel-radius);
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.bottom-btn i {
+    color: var(--secondary);
+    font-size: 3rem;
+    transition: color 0.3s ease-out;
+}
+
+.bottom-btn:hover {
+    border-color: white;
+    background-color: var(--light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.bottom-btn:hover i {
     color: white;
 }
 
@@ -295,7 +331,7 @@ main {
     /* margin-bottom: 2rem; */
     opacity: 0.9;
     color: var(--secondary);
-    padding-left: 1rem;
+    padding-left: 1.25rem;
 }
 
 .white {
@@ -317,7 +353,7 @@ main {
     padding: 2rem;
     margin: 2rem 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3 ease;
+    transition: transform 0.3s ease;
 }
 
 .content-card:hover {
@@ -665,12 +701,17 @@ main {
 }
 
 @media (max-width: 510px) {
+    .bottom-btn {
+        display: none;
+    }
+    
     .cursor {
         display: none;
     }
 
     .hero .subtitle {
         text-align: center;
+        padding-left: 0;
     }
 
     .sub-symbol {
