@@ -129,8 +129,12 @@ function typeWriter(element, text, speed = 100) {
 // Initialize typing effect when page loads
 window.addEventListener('load', function () {
     const heroTitle = document.querySelector('.typewriter');
-    if (heroTitle) {
+    // Vérifie si la largeur de l'écran est supérieure à 510px
+    if (heroTitle && window.innerWidth > 510) {
         typeWriter(heroTitle, 'Côme Dairin', 150);
+    } else if (heroTitle) {
+        // Sinon, affiche directement le texte sans l'effet
+        heroTitle.innerHTML = 'Côme Dairin';
     }
 });
 

@@ -583,6 +583,8 @@ main {
         text-align: center;
     }
 
+}
+
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
@@ -673,4 +675,3 @@ main {
         display: none;
     }
 }
-
