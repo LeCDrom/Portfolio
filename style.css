@@ -572,6 +572,78 @@ main {
     display: none;
 }
 
+/* Footer */
+footer {
+    background: white;
+    border-top-left-radius: var(--panel-radius);
+    border-top-right-radius: var(--panel-radius);
+    margin-top: 4rem;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+}
+
+.footer-section h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.footer-section i {
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-out;
+    border-right: solid var(--translucent) 2px;
+    border-left: solid var(--translucent) 2px;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    background-color: var(--translucent);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--translucent);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.footer-bottom p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
 /* Responsive */
 @media (max-width: 976px) {
     .nav-links {
@@ -652,6 +724,30 @@ main {
 
     nav {
         margin-inline: 10% !important;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 0 1.5rem;
+        text-align: center;
+    }
+
+    .footer-section a {
+        width: 200px;
+        justify-content: center;
+    }
+
+    .footer-section a:hover {
+        transform: none;
+    }
+    
+    .footer-section h4 {
+        justify-content: center;
+    }
+    
+    .footer-links {
+        align-items: center;
     }
 }
 
