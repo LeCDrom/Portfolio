@@ -361,6 +361,8 @@ main {
     transition: all 0.3s ease;
     border-left: 4px solid var(--secondary);
     border-right: 4px solid var(--secondary);
+
+    cursor: pointer;
 }
 
 .sae-card:hover {
