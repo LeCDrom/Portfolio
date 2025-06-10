@@ -118,6 +118,12 @@ nav {
     color: var(--primary);
 }
 
+.subtitles-wrapper {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .btn {
     display: flex;
     flex-direction: row;
@@ -220,7 +226,6 @@ main {
 .hero {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     gap: 2rem;
     padding: 4rem 0;
@@ -235,7 +240,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
     padding: 1.5rem;
     backdrop-filter: blur(5px);
     border: solid var(--primary) 1px;
@@ -575,10 +579,9 @@ main {
         align-items: center;
     }
 
-    #left {
+    .typewriter-wrapper {
         text-align: center;
     }
-}
 
 @media (max-width: 768px) {
     .nav-links {
@@ -656,3 +659,18 @@ main {
         padding-top: 0.5rem;
     }
 }
+
+@media (max-width: 510px) {
+    .cursor {
+        display: none;
+    }
+
+    .hero .subtitle {
+        text-align: center;
+    }
+
+    .sub-symbol {
+        display: none;
+    }
+}
+
