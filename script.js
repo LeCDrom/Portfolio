@@ -154,3 +154,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Fonction pour gérer l'ouverture des détails SAE
+function openSaeDetail(saeId) {
+    // Cacher tous les containers de détails
+    document.querySelectorAll('.sae-detail-container').forEach(container => {
+        container.classList.remove('active');
+    });
+    
+    // Afficher le bon container
+    const targetContainer = document.getElementById(`sae-details-${saeId}`);
+    if (targetContainer) {
+        targetContainer.classList.add('active');
+    }
+    
+    // Afficher la section sae-details
+    showSection('sae-details');
+}
+
+// Modifier les event listeners des SAE cards
+document.addEventListener('DOMContentLoaded', function() {
+    // Exemple pour les SAE cards - adapter selon vos IDs réels
+    const saeCards = document.querySelectorAll('.sae-card');
+    saeCards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            // Adapter la logique selon comment vous identifiez vos SAE
+            // Exemple : si data-sae="11" sur la card
+            const saeId = card.getAttribute('data-sae') || `1${index + 1}`;
+            openSaeDetail(saeId);
+        });
+    });
+});

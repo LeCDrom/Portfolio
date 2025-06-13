@@ -8,7 +8,9 @@
 
     --text: #312d31;
     --text-secondary: #5a4a68;
+
     --panel-radius: 15px;
+    --border-gradient: solid linear-gradient(0deg,rgba(95, 68, 92, 1) 0%, rgba(146, 109, 142, 1) 100%) 1px;
 }
 
 * {
@@ -147,6 +149,7 @@ nav {
     gap: 1.5rem;
 }
 
+/*
 .btn-header {
     display: inline-flex;
     justify-content: center;
@@ -166,6 +169,7 @@ nav {
 .btn-header:hover {
     background-color: white;
 }
+*/
 
 .btn:hover {
     background: var(--light);
@@ -214,7 +218,7 @@ nav {
     border-color: white;
     background-color: var(--light);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 .bottom-btn:hover i {
@@ -567,7 +571,8 @@ main {
 
 .skill-tag {
     background: #e2e8f0;
-    color: #4a5568;
+    background: var(--translucent);
+    color: var(--text);
     padding: 0.25rem 0.75rem;
     border-radius: var(--panel-radius);
     font-size: 0.8rem;
@@ -577,13 +582,257 @@ main {
     display: none;
 }
 
+.sae-detail-container {
+    display: none;
+    background: transparent;
+    border-radius: var(--panel-radius);
+}
+
+.sae-detail-container.active {
+    display: block;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.sae-detail-header {
+    padding: 2rem;
+    margin: 2rem 0;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    color: var(--secondary);
+    margin: 2rem 0;
+    background: white;
+    border-radius: var(--panel-radius);
+}
+
+.sae-detail-header .material-symbols-rounded {
+    font-size: 2rem;
+}
+
+.competence-analysis {
+    background: white;
+    border-radius: var(--panel-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.competence-analysis h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.competence-analysis p {
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.progress-container {
+    margin-top: 1.5rem;
+}
+
+.progress-container p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--translucent);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary), var(--light));
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.evidence-section {
+    margin: 3rem 0;
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: var(--panel-radius);
+}
+
+.element-header {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reflect-element-header {
+    color: #d3a5cd;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.evidence-item {
+    background: var(--more-translucent);
+    border: 1px solid var(--translucent);
+    border-radius: var(--panel-radius);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.evidence-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 10px 30px var(--translucent);
+}
+
+.evidence-item h4 {
+    color: var(--secondary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.evidence-item p {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.reflection-section {
+    background: var(--translucent);
+    border: 2px solid var(--light);
+    border-radius: var(--panel-radius);
+    padding: 2.5rem;
+    margin-top: 3rem;
+    backdrop-filter: blur(8px);
+}
+
+.reflection-section h3 {
+    color: #d3a5cd;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.reflection-section h4 {
+    color: #d3a5cd;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.reflect-highlight {
+    border-right: solid 2px #d3a5cd;
+    border-left: solid 2px #d3a5cd;
+    border-radius: 12px;
+    padding: 1rem;
+    background: #372536;
+    color: #d3a5cd;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    box-shadow: 10px 0px 10px rgba(211, 165, 205, 0.1), -10px 0px 10px rgba(211, 165, 205, 0.1);
+}
+
+.reflection-section p {
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.reflect-element {
+    color: #d3a5cd;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reflect-element-header .material-symbols-rounded {
+    font-size: 2.5rem;
+}
+
+
+.back-btn {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background: var(--more-translucent);
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: var(--secondary);
+    color: white;
+    transform: translateX(-5px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
 /* Footer */
 footer {
     background: white;
     border-top-left-radius: var(--panel-radius);
     border-top-right-radius: var(--panel-radius);
     margin-top: 4rem;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);*/
 }
 
 .footer-content {
