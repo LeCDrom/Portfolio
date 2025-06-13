@@ -36,6 +36,10 @@ body {
     background-position: 0 0, 0 0;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .container {
     flex: 1;
     margin-inline: 10%;
@@ -596,23 +600,34 @@ main {
 .sae-detail-header {
     padding: 2rem;
     margin: 2rem 0;
-
     font-size: 1.5rem;
     font-weight: bold;
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    
     color: var(--secondary);
     margin: 2rem 0;
     background: white;
     border-radius: var(--panel-radius);
+    border-right: 4px solid var(--secondary);
+    border-left: 4px solid var(--secondary);
 }
 
 .sae-detail-header .material-symbols-rounded {
     font-size: 2rem;
+}
+
+.project-presentation {
+    background: white;
+    border-radius: var(--panel-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.project-presentation p {
+    color: var(--text);
+    line-height: 1.6;
 }
 
 .competence-analysis {
@@ -622,20 +637,17 @@ main {
     margin: 2rem 0;
 }
 
-.competence-analysis h3 {
-    color: var(--primary);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
 .competence-analysis p {
     color: var(--text);
     line-height: 1.6;
-    margin-bottom: 1rem;
 }
 
 .progress-container {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--more-translucent);
+    border: 1px solid var(--translucent);
+    border-radius: var(--panel-radius);
 }
 
 .progress-container p {
@@ -704,7 +716,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .evidence-item {
@@ -738,7 +750,7 @@ main {
     border: 2px solid var(--light);
     border-radius: var(--panel-radius);
     padding: 2.5rem;
-    margin-top: 3rem;
+    margin: 2rem 0;
     backdrop-filter: blur(8px);
 }
 
@@ -920,6 +932,8 @@ footer {
 
     .nav-links.mobile-active {
         display: flex;
+        border-bottom-left-radius: var(--panel-radius);
+        border-bottom-right-radius: var(--panel-radius);
     }
 
     .mobile-menu {

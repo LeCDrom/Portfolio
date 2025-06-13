@@ -131,7 +131,7 @@ window.addEventListener('load', function () {
     const heroTitle = document.querySelector('.typewriter');
     // Vérifie si la largeur de l'écran est supérieure à 510px
     if (heroTitle && window.innerWidth > 510) {
-        typeWriter(heroTitle, 'Côme Dairin', 150);
+        typeWriter(heroTitle, 'Côme Dairin', 100);
     } else if (heroTitle) {
         // Sinon, affiche directement le texte sans l'effet
         heroTitle.innerHTML = 'Côme Dairin';
