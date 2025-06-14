@@ -7,21 +7,22 @@ const bgPositions = {
     competences: 300
 };
 
-function showSection(sectionId) {
+function showSection(sectionId, preserveBackground = false) {
 
     if (sectionId === currentSection) {
         return;
     }
 
-    // Récupère la position cible du fond
-    let targetPosition = bgPositions[sectionId] || 0;
-
-    // Applique la position du fond
-    document.body.style.backgroundPosition = `0 ${targetPosition}px`;
+    // Ne change la position du fond que si preserveBackground est false
+    if (!preserveBackground) {
+        // Récupère la position cible du fond
+        let targetPosition = bgPositions[sectionId] || 0;
+        // Applique la position du fond
+        document.body.style.backgroundPosition = `0 ${targetPosition}px`;
+    }
 
     // Met à jour la section courante
     currentSection = sectionId;
-
 
     // 1) Masquer toutes les sections
     document.querySelectorAll('.section').forEach(sec =>
@@ -168,8 +169,11 @@ function openSaeDetail(saeId) {
         targetContainer.classList.add('active');
     }
     
-    // Afficher la section sae-details
-    showSection('sae-details');
+    // Afficher la section sae-details SANS changer le background
+    showSection('sae-details', true);  // preserveBackground = true
+    
+    // Faire défiler vers le haut de la page
+    window.scrollTo(0, 0);
 }
 
 // Modifier les event listeners des SAE cards
