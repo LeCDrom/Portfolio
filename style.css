@@ -149,8 +149,13 @@ nav {
 }
 
 .hero-btn {
-    width: 220px;
+    width: 240px;
     gap: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.hero-btn .material-symbols-rounded {
+    font-size: 2rem;
 }
 
 /*
@@ -557,6 +562,9 @@ main {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .skill-category h4 {
@@ -571,6 +579,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin: 1rem 0;
 }
 
 .skill-tag {
@@ -742,11 +751,11 @@ main {
 }
 
 #proof-sae11-1 {
-    background-image: url(Traces/sae11.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/Traces/sae11.png);
 }
 
 #proof-sae11-2 {
-    background-image: url(Traces/sae11-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/Traces/sae11-2.png);
 }
 
 .reflection-section {
