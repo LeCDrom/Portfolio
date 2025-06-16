@@ -26,7 +26,7 @@ Le site comporte plusieurs sections :
 Ce portfolio m’aide à :
 
 - Présenter mes acquis de manière structurée
-- Valoriser mes projets dans le cadre de ma recherche de stage
+- Valoriser mes projets dans le cadre de ma recherche de stage/alternance
 - Me préparer à l’insertion professionnelle
 - M’exercer au développement web (HTML, CSS, JS)
 
