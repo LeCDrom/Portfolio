@@ -784,89 +784,85 @@ fieldset legend {
 }
 
 #proof-sae12-1 {
-    background-image: url(images/sae12.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae12.png);
 }
 
 #proof-sae12-2 {
-    background-image: url(images/sae12-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae12-2.png);
 }
 
 #proof-sae13-1 {
-    background-image: url(images/sae13.jpg);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae13.jpg);
 }
 
 #proof-sae13-2 {
-    background-image: url(images/sae13-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae13-2.png);
 }
 
 #proof-sae14-1 {
-    background-image: url(images/sae14.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae14.png);
     background-position: top;
 }
 
 #proof-sae14-2 {
-    background-image: url(images/sae14-2.gif);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae14-2.gif);
     background-position: top;
 }
 
 #proof-sae14-3 {
-    background-image: url(images/sae14-3.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae14-3.png);
 }
 
 #proof-sae15-1 {
-    background-image: url(images/sae15.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae15.png);
 }
 
 #proof-sae15-2 {
-    background-image: url(images/sae15-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae15-2.png);
 }
 
 #proof-sae15-3 {
-    background-image: url(images/sae15-3.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae15-3.png);
 }
 
 #proof-sae21-1 {
-    background-image: url(images/sae21.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae21.png);
 }
 
 #proof-sae21-2 {
-    background-image: url(images/sae21-2.png);
-}
-
-#proof-sae21-1 {
-    background-image: url(images/sae22.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae21-2.png);
 }
 
 #proof-sae22-1 {
-    background-image: url(images/sae22.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae22.png);
 }
 
 #proof-sae22-2 {
-    background-image: url(images/sae22-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae22-2.png);
 }
 
 #proof-sae22-3 {
-    background-image: url(images/sae22-3.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae22-3.png);
 }
 
 #proof-sae23-1 {
-    background-image: url(images/sae23.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae23.png);
 }
 
 #proof-sae23-2 {
-    background-image: url(images/sae23-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae23-2.png);
 }
 
 #proof-sae24-1 {
-    background-image: url(images/sae24.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae24.png);
 }
 
 #proof-sae24-2 {
-    background-image: url(images/sae24-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae24-2.png);
 }
 
 #proof-sae24-3 {
-    background-image: url(images/sae24-3.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae24-3.png);
 }
 
 .reflection-section {
@@ -958,7 +954,7 @@ fieldset legend {
 }
 
 .competence-analysis h4 {
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 1.1rem;
     margin: 1rem 0;
     padding: 0.5rem;
