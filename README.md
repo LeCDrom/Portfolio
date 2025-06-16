@@ -26,13 +26,13 @@ Le site comporte plusieurs sections :
 Ce portfolio m’aide à :
 
 - Présenter mes acquis de manière structurée
-- Valoriser mes projets dans le cadre de ma recherche de stage
+- Valoriser mes projets dans le cadre de ma recherche de stage/alternance
 - Me préparer à l’insertion professionnelle
 - M’exercer au développement web (HTML, CSS, JS)
 
 ## 🛠️ Technologies utilisées
 
-- HTML5 / CSS3
+- HTML / CSS
 - JavaScript
 - [Material Symbols](https://fonts.google.com/icons)
 - [Font Awesome](https://fontawesome.com/)
@@ -41,10 +41,10 @@ Ce portfolio m’aide à :
 ## 📁 Structure des fichiers
 
 **portfolio/**  
-├── index.html # Page principale  
-├── style.css # Feuille de style  
-├── script.js # Script JS pour la navigation  
-└── README.md # Ce fichier
+├── `index.html` # Page principale  
+├── `style.css`  # Feuille de style  
+├── `script.js`  # Script JS pour la navigation  
+└── `README.md`  # Ce fichier
 
 ## 🔒 À propos de la cybersécurité
 
@@ -52,7 +52,7 @@ Je m’oriente vers la cybersécurité, avec pour objectifs :
 - Obtenir des **certifications** reconnues (ex. Cisco CCNA)
 - Participer à des **CTF** (Capture The Flag)
 - Réaliser des **projets personnels** orientés sécurité
-- Effectuer un **stage** et obtenir une **alternance** en cybersécurité
+- Effectuer un **stage** et obtenir une **alternance** en réseaux/cybersécurité
 
 ## 📬 Me contacter
 
