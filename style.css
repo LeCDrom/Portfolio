@@ -462,7 +462,7 @@ main {
     background: var(--more-translucent);
     padding: 1rem;
     border-radius: 8px;
-    border-left: 3px solid var(--primary);
+    border-left: 3px solid var(--secondary);
 }
 
 .sae-section h4 {
@@ -536,7 +536,7 @@ h4-margin-top {
     height: 240px;
     width: 240px;
     border-radius: 16px;
-    background-image: url(/images/face-min_resized.JPG);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/face-min_resized.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -565,7 +565,6 @@ h4-margin-top {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
 }
 
 .skill-category {
@@ -777,11 +776,97 @@ fieldset legend {
 }
 
 #proof-sae11-1 {
-    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/Traces/sae11.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae11.png);
 }
 
 #proof-sae11-2 {
-    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/Traces/sae11-2.png);
+    background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae11-2.png);
+}
+
+#proof-sae12-1 {
+    background-image: url(images/sae12.png);
+}
+
+#proof-sae12-2 {
+    background-image: url(images/sae12-2.png);
+}
+
+#proof-sae13-1 {
+    background-image: url(images/sae13.jpg);
+}
+
+#proof-sae13-2 {
+    background-image: url(images/sae13-2.png);
+}
+
+#proof-sae14-1 {
+    background-image: url(images/sae14.png);
+    background-position: top;
+}
+
+#proof-sae14-2 {
+    background-image: url(images/sae14-2.gif);
+    background-position: top;
+}
+
+#proof-sae14-3 {
+    background-image: url(images/sae14-3.png);
+}
+
+#proof-sae15-1 {
+    background-image: url(images/sae15.png);
+}
+
+#proof-sae15-2 {
+    background-image: url(images/sae15-2.png);
+}
+
+#proof-sae15-3 {
+    background-image: url(images/sae15-3.png);
+}
+
+#proof-sae21-1 {
+    background-image: url(images/sae21.png);
+}
+
+#proof-sae21-2 {
+    background-image: url(images/sae21-2.png);
+}
+
+#proof-sae21-1 {
+    background-image: url(images/sae22.png);
+}
+
+#proof-sae22-1 {
+    background-image: url(images/sae22.png);
+}
+
+#proof-sae22-2 {
+    background-image: url(images/sae22-2.png);
+}
+
+#proof-sae22-3 {
+    background-image: url(images/sae22-3.png);
+}
+
+#proof-sae23-1 {
+    background-image: url(images/sae23.png);
+}
+
+#proof-sae23-2 {
+    background-image: url(images/sae23-2.png);
+}
+
+#proof-sae24-1 {
+    background-image: url(images/sae24.png);
+}
+
+#proof-sae24-2 {
+    background-image: url(images/sae24-2.png);
+}
+
+#proof-sae24-3 {
+    background-image: url(images/sae24-3.png);
 }
 
 .reflection-section {
@@ -985,9 +1070,11 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--primary);
+    color: var(--secondary);
     background-color: var(--translucent);
     transform: translateX(5px);
+    border-right: solid var(--secondary) 2px;
+    border-left: solid var(--secondary) 2px;
 }
 
 .footer-bottom {
