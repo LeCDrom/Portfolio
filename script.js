@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (text === 'description') {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
-                window.open('https://drive.google.com/file/d/1Tu7h8K9AwTFlKVgLSBJ0MAUF1RTDBmN7/view?usp=sharing', '_blank').focus();
+                window.open('https://drive.google.com/file/d/10e1ynPhI95X0xS66tQjhjfrG3vTKUjAE/view?usp=sharing', '_blank').focus();
             });
         }
 
