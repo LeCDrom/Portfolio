@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (text === 'description') {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
-                window.open('', '_blank').focus();
+                window.open('https://drive.google.com/file/d/1OJxtQFHsy6d3YO7yxh--GKzm7uRu6ocm/view?usp=sharing', '_blank').focus();
             });
         }
 
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, observerOptions);
 
     // Observe all cards
-    document.querySelectorAll('.sae-card, .content-card, .skill-category').forEach(card => {
+    document.querySelectorAll('.sae-card, .content-card, .skill-category, .year-selector').forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease';
@@ -158,34 +158,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fonction pour gérer l'ouverture des détails SAE
 function openSaeDetail(saeId) {
-    // Cacher tous les containers de détails
-    document.querySelectorAll('.sae-detail-container').forEach(container => {
-        container.classList.remove('active');
-    });
-    
-    // Afficher le bon container
-    const targetContainer = document.getElementById(`sae-details-${saeId}`);
-    if (targetContainer) {
-        targetContainer.classList.add('active');
-    }
-    
-    // Afficher la section sae-details SANS changer le background
-    showSection('sae-details', true);  // preserveBackground = true
-    
-    // Faire défiler vers le haut de la page
+    document.querySelectorAll('.sae-detail-container')
+        .forEach(container => container.classList.remove('active'));
+
+    const target = document.querySelector(
+        `.sae-detail-container[data-sae-id="${saeId}"]`
+    );
+
+    if (!target) return;
+
+    target.classList.add('active');
+    showSection('sae-details', true);
     window.scrollTo(0, 0);
 }
 
 // Modifier les event listeners des SAE cards
-document.addEventListener('DOMContentLoaded', function() {
-    // Exemple pour les SAE cards - adapter selon vos IDs réels
+document.addEventListener('DOMContentLoaded', function () {
     const saeCards = document.querySelectorAll('.sae-card');
-    saeCards.forEach((card, index) => {
+
+    saeCards.forEach(card => {
         card.addEventListener('click', () => {
-            // Adapter la logique selon comment vous identifiez vos SAE
-            // Exemple : si data-sae="11" sur la card
-            const saeId = card.getAttribute('data-sae') || `1${index + 1}`;
+            const saeId = card.getAttribute('data-sae-id');
+            if (!saeId) return;
+
             openSaeDetail(saeId);
         });
     });
+});
+
+
+// Filtrage des projets par année (sae-grid)
+document.addEventListener("DOMContentLoaded", () => {
+    const yearButtons = document.querySelectorAll(".year-btn");
+    const saeCards = document.querySelectorAll(".sae-card");
+
+    function filterByYear(year) {
+        saeCards.forEach(card => {
+            card.style.display =
+                card.dataset.year === year ? "flex" : "none";
+        });
+    }
+
+    yearButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const year = btn.dataset.year;
+
+            yearButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            filterByYear(year);
+        });
+    });
+
+    // affichage par défaut : BUT 1
+    filterByYear("1");
 });
