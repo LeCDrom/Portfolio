@@ -99,7 +99,7 @@ nav {
     padding: 0.5rem 0.7rem;
     text-decoration: none;
     font-weight: 500;
-    color: black;
+    color: var(--text);
     border-radius: 8px;
     background-color: transparent;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
@@ -611,9 +611,38 @@ h4-margin-top {
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
+}
+
+/* ligne générique */
+.skills-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* 3 colonnes */
+.skills-row > .skill-category {
+    flex: 1 1 0;
+}
+
+/* ligne à 2 éléments */
+.skills-row--two > .skill-category {
+    flex: 1 1 0;
+}
+
+/* responsive */
+@media (max-width: 1300px) {
+    .skills-row {
+        flex-direction: column;
+    }
 }
 
 .skill-category {
@@ -914,6 +943,14 @@ fieldset legend {
     background-image: url(https://raw.githubusercontent.com/LeCDrom/Portfolio/refs/heads/main/images/sae24-3.png);
 }
 
+#proof-sae31-1 {
+    background-image: url(images/sae31-1.jpeg);
+}
+
+#proof-sae31-2 {
+    background-image: url(images/sae31-2.png);
+}
+
 .reflection-section {
     background: var(--translucent);
     border: 2px solid var(--light);
@@ -1110,8 +1147,8 @@ footer {
     padding: 0.5rem;
     border-radius: 8px;
     transition: all 0.3s ease-out;
-    border-right: solid var(--translucent) 2px;
-    border-left: solid var(--translucent) 2px;
+    border-right: solid var(--primary) 2px;
+    border-left: solid var(--primary) 2px;
 }
 
 .footer-links a:hover {
