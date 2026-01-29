@@ -951,6 +951,18 @@ fieldset legend {
     background-image: url(images/sae31-2.png);
 }
 
+#proof-sae33-1 {
+    background-image: url(images/sae33-1.png);
+}
+
+#proof-sae33-2 {
+    background-image: url(images/sae33-2.jpg);
+}
+
+#proof-sae33-3 {
+    background-image: url(images/sae33-3.png);
+}
+
 .reflection-section {
     background: var(--translucent);
     border: 2px solid var(--light);
