@@ -421,14 +421,10 @@ main {
 }
 
 .year-btn {
-    width: 4rem;
-    height: 4rem;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    backdrop-filter: blur(5px);
+    font-size: 17px;
 }
 
 .year-btn:hover {
