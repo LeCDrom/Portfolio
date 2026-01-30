@@ -17,7 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    word-spacing: 3px;
+    word-spacing: 2px;
 }
 
 a {
@@ -992,8 +992,20 @@ fieldset legend {
     margin: 1.5rem 0 1rem 0;
 }
 
+@keyframes pulseColor {
+    0% {
+        box-shadow: 0 0 10px 0 rgba(211, 165, 205, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 10px 2px rgba(211, 165, 205, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px 0 rgba(211, 165, 205, 0.2);    
+    }
+}
+
 .reflect-highlight {
-    border-right: solid 2px #d3a5cd;
+    border: solid 2px #d3a5cd;
     border-left: solid 2px #d3a5cd;
     border-radius: 12px;
     padding: 1rem;
@@ -1001,7 +1013,9 @@ fieldset legend {
     color: #d3a5cd;
     line-height: 1.6;
     margin-bottom: 2.5rem;
-    box-shadow: 10px 0px 10px rgba(211, 165, 205, 0.1), -10px 0px 10px rgba(211, 165, 205, 0.1);
+    box-shadow: 0 0 10px 0 rgba(211, 165, 205, 0.5);
+    font-family: "JetBrains Mono", monospace;
+    animation: pulseColor 3s ease-in-out infinite;
 }
 
 .reflection-section p {
